@@ -1,4 +1,4 @@
-
+package SistemaGestaoEstoque;
 public class Usuario {
 
 	public String nome;

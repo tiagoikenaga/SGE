@@ -1,6 +1,5 @@
-
+package SistemaGestaoEstoque;
 public class TesteUsuario {
-
 	public static void main(String[] args) {
 		Usuario usuario = new Usuario();
 
@@ -9,6 +8,6 @@ public class TesteUsuario {
 		usuario.senha = "@rByteT3";
 		usuario.email = "tiago@arbyte.com";
 
-		System.out.println(usuario.autentica("@rByteT3", "tiago@arbyte.com"));
+		System.out.println(usuario.autentica(usuario.senha, usuario.email));
 	}
 }
