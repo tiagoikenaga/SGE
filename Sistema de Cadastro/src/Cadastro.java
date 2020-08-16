@@ -6,6 +6,7 @@ public class Cadastro {
 
         System.out.println("Digite o seu Nome: ");
         String nome = scanner.nextLine();
+        
         System.out.println("Digite o seu Sobrenome: ");
         String sobrenome = scanner.nextLine();
 
@@ -15,17 +16,20 @@ public class Cadastro {
         System.out.println("Digite seu e-mail: ");
         String email = scanner.nextLine();
 
-        boolean cSenha = false;
+        // boolean cSenha = false;
 
-        while (cSenha == false) {
+        //while (cSenha == false) {
             System.out.println("Digite sua senha: ");
             String senha = scanner.nextLine();
             // senha.matches("(?=.*[0-9])(?=.*[a-z])(?=.*[-, !, @])(?=.*[A-Z])")
-            if (senha.contains("@") && senha.length() >= 8) {
+        public boolean verificaSenha(int senha){
+       
+            if (senha.matches("(?=.*[0-9])(?=.*[a-z])(?=.*[-, !, @])(?=.*[A-Z])") && senha.length() >= 8) {
                 System.out.println("Cadastro realizado com Sucesso");
-                cSenha = true;
+                return true;
             } else {
                 System.out.println("Sua senha precisa ter no mínimo 8 caracteres, com pelo menos uma letra maiuscula e numero.Por favor repita o processo.");
+                return false;
             }
         }
         scanner.close();   
