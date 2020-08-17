@@ -52,6 +52,7 @@ public class Cadastro {
             System.out.println("Cadastro realizado");            
             login = nome.charAt(0) + "." + sobrenome;
             System.out.println("Login: " + login);
+            System.out.println("e-mail: " + email);
             System.out.println("Senha: "+ senha);
         }
         boolean validar = false;
@@ -63,7 +64,8 @@ public class Cadastro {
             String vSenha = scanner.nextLine();
 
             if (vLogin.equals(login) && vSenha.equals(senha)) {
-                System.out.println("Login realizado com Sucesso");
+                System.out.println("Seja Bem-vindo(a): " + nome + " " + sobrenome);
+                System.out.println("Login realizado com sucesso!");
                 validar = true;               
             } else {
                 System.out.println("Login ou Senha inválidos");                                
