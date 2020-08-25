@@ -64,8 +64,8 @@ public class Cadastro {
             String vSenha = scanner.nextLine();
 
             if (vLogin.equals(login) && vSenha.equals(senha)) {
-                System.out.println("Seja Bem-vindo(a): " + nome + " " + sobrenome);
-                System.out.println("Login realizado com sucesso!");
+                System.out.println("Login realizado com sucesso!");                
+                System.out.println("Seja Bem-vindo(a): " + nome + " " + sobrenome + ", " + nome.charAt(0) + sobrenome.charAt(0));
                 validar = true;               
             } else {
                 System.out.println("Login ou Senha inválidos");                                
